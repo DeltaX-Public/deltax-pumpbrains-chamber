@@ -153,4 +153,62 @@ export class LocalTwinChamber {
       },
     };
   }
+
+  /** Experimenter checkpoint (not a DeltaX intervention). */
+  checkpoint() {
+    return {
+      kind: 'EXPERIMENTER_CHECKPOINT',
+      at: new Date().toISOString(),
+      snapshot: this.snapshot(),
+      randState: null, // mulberry32 is seeded from step progression via seed only at construct; see restore note
+    };
+  }
+
+  /**
+   * Restore experimenter checkpoint.
+   * Note: RNG is reconstructed from seed + replaying stimulate/tick is preferred for exactness.
+   * This restore reloads chamber state snapshots and modulation.
+   */
+  restore(checkpoint) {
+    if (!checkpoint?.snapshot) throw new Error('invalid experimenter checkpoint');
+    const snap = structuredClone(checkpoint.snapshot);
+    this.step = snap.step;
+    this.seed = snap.seed;
+    this.species = snap.species;
+    this.modulation = { ...snap.modulation };
+    this.chambers = {
+      CONTROL: snap.chambers.CONTROL,
+      OBSERVE: snap.chambers.OBSERVE,
+      EXECUTIVE: snap.chambers.EXECUTIVE,
+    };
+    return this.snapshot();
+  }
+
+  /** Experimenter perturbation (distinct from DeltaX executive intervention). */
+  perturb(kind, payload = {}) {
+    const event = { kind: 'EXPERIMENTER_PERTURBATION', type: kind, payload, at: this.step };
+    if (kind === 'sensory_mask') {
+      const channel = payload.channel;
+      const factor = payload.factor ?? 0;
+      for (const st of Object.values(this.chambers)) {
+        if (channel && st.rates[channel] != null) st.rates[channel] *= factor;
+      }
+    } else if (kind === 'drive_pressure') {
+      const behavior = payload.behavior || 'escape';
+      const delta = payload.delta ?? 0.3;
+      for (const st of Object.values(this.chambers)) {
+        if (st.behavior[behavior] != null) st.behavior[behavior] = Math.max(0, Math.min(1, st.behavior[behavior] + delta));
+      }
+    } else if (kind === 'resource_scarcity') {
+      for (const st of Object.values(this.chambers)) st.energy = Math.max(0, st.energy * (payload.factor ?? 0.5));
+    } else if (kind === 'hazard_boost') {
+      for (const st of Object.values(this.chambers)) {
+        st.behavior.escape = Math.max(0, Math.min(1, st.behavior.escape + (payload.delta ?? 0.4)));
+        st.rates.visual = (st.rates.visual || 0) + 8;
+      }
+    } else {
+      throw new Error(`Unknown experimenter perturbation: ${kind}`);
+    }
+    return event;
+  }
 }

@@ -48,7 +48,8 @@ input[type=file]{display:none}
   <button id="next">Next</button>
   <button id="reset" class="secondary">Reset</button>
   <label class="file">Load JSON<input id="file" type="file" accept="application/json,.json"/></label>
-  <button id="loadDefault" class="secondary">Load twin_1789696775816</button>
+  <button id="loadDefault" class="secondary">Load twin run</button>
+  <button id="loadStress" class="secondary">Load stress run</button>
   <span class="badge" id="stepBadge">step —</span>
 </div>
 
@@ -186,6 +187,7 @@ $('file').onchange = async (e) => {
   loadArtifact(JSON.parse(await f.text()));
 };
 $('loadDefault').onclick = () => loadDefault().catch((err) => { $('log').textContent = String(err); });
+$('loadStress').onclick = () => fetch('./data/stress-run.json').then(r=>r.json()).then(loadArtifact).catch((err) => { $('log').textContent = String(err); });
 
 loadDefault().catch(() => {
   $('log').textContent = 'Default artifact not found. Use Load JSON.';

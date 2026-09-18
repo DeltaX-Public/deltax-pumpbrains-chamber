@@ -13,6 +13,9 @@
     "demo:twin": "node scripts/demo-twin.js",
     "demo:observatory": "node scripts/serve-observatory.js",
     "audit:pumpbrains": "node scripts/fetch-species-summary.js",
-    "demo:local-runtime": "node scripts/demo-local-runtime-twin.js"
+    "demo:local-runtime": "node scripts/demo-local-runtime-twin.js",
+    "demo:stress": "node scripts/demo-stress-local-runtime.js",
+    "demo:checkpoint": "node scripts/demo-checkpoint-replay.js",
+    "demo:hosted-observe": "node scripts/demo-hosted-observe.js"
   }
 }

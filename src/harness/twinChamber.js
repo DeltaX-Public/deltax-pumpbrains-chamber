@@ -136,6 +136,24 @@ export class TwinChamberHarness {
     };
   }
 
+  experimenterCheckpoint() {
+    const cp = this.chamber.checkpoint();
+    this.telemetry.record('experimenter_checkpoint', { checkpoint: cp });
+    return cp;
+  }
+
+  experimenterRestore(checkpoint) {
+    const snap = this.chamber.restore(checkpoint);
+    this.telemetry.record('experimenter_restore', { checkpoint_at: checkpoint?.at, snapshot_step: snap.step });
+    return snap;
+  }
+
+  experimenterPerturb(kind, payload = {}) {
+    const event = this.chamber.perturb(kind, payload);
+    this.telemetry.record('experimenter_perturbation', event);
+    return event;
+  }
+
   async close() {
     if (this.executive?.close) await this.executive.close();
   }
