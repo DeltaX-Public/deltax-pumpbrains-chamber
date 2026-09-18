@@ -1,0 +1,608 @@
+{
+  "schema": "chamber.validation_battery.v1",
+  "generated_at": "2026-09-18T03:10:52.348Z",
+  "substrate": "LocalTwinChamber (CONTROL / OBSERVE / EXECUTIVE LIF Model)",
+  "runtime_provenance": {
+    "executive_source": "local_runtime",
+    "runtime_version": "0.1.0",
+    "branch_manifest_version": "0.1.0",
+    "package_version": "0.1.0"
+  },
+  "aggregate": {
+    "total_seeds": 25,
+    "seed_range": "20260900..20260924",
+    "divergence_rate": 1,
+    "total_steps_evaluated": 200,
+    "executive_governance": {
+      "mean_intervention_rate": 0,
+      "total_permits": 200,
+      "total_vetoes": 0,
+      "total_modulations": 0,
+      "total_defers": 0
+    },
+    "performance": {
+      "mean_latency_ms": 10.1
+    }
+  },
+  "runs": [
+    {
+      "seed": 20260900,
+      "diverged": true,
+      "divergence_steps": [
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 13
+    },
+    {
+      "seed": 20260901,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260902,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 12
+    },
+    {
+      "seed": 20260903,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260904,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260905,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260906,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260907,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260908,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260909,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260910,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260911,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 13
+    },
+    {
+      "seed": 20260912,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260913,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260914,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260915,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260916,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260917,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260918,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260919,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260920,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260921,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 12
+    },
+    {
+      "seed": 20260922,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260923,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260924,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    }
+  ]
+}

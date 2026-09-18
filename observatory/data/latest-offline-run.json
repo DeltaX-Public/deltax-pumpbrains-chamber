@@ -1,34 +1,34 @@
 {
-  "run_id": "offline_1789697518457",
+  "run_id": "offline_1789701079437",
   "kind": "offline_twin_chamber",
   "offline": true,
   "external_api": false,
   "seed": 20260918,
-  "executive_mode": "stub",
+  "executive_mode": "local_runtime",
   "note": "Fully local: LocalTwinChamber substrate + DeltaX stub/local_runtime. No PumpBrains.com calls.",
   "metrics": {
     "steps": 8,
     "survival_duration_steps": 8,
     "task_completion": null,
-    "cumulative_reward_proxy": 3,
+    "cumulative_reward_proxy": 2.75,
     "resource_efficiency": 0.655,
     "exploration_coverage": 6,
-    "repeated_action_loops": 3,
+    "repeated_action_loops": 7,
     "hazard_encounters": 3,
     "failed_actions": 0,
-    "state_transition_diversity": 6,
+    "state_transition_diversity": 1,
     "candidate_action_diversity": 6,
-    "intervention_frequency": 1,
-    "veto_frequency": 0.25,
-    "modulation_frequency": 0.75,
+    "intervention_frequency": 0.375,
+    "veto_frequency": 0.375,
+    "modulation_frequency": 0,
     "defer_fallback_frequency": 0,
-    "control_vs_executive_divergence_rate": 1,
-    "divergence_steps": 8,
+    "control_vs_executive_divergence_rate": 0.875,
+    "divergence_steps": 7,
     "disposition_counts": {
-      "veto": 2,
-      "modulate": 6,
+      "veto": 3,
+      "modulate": 0,
       "defer": 0,
-      "permit": 0,
+      "permit": 5,
       "escalate": 0
     },
     "mean_energy": {
@@ -45,20 +45,32 @@
         "channel": "sugar",
         "intensity": 0.8
       },
-      "executive_source": "deltax_stub",
-      "observe_disposition": "MODULATE",
-      "executive_disposition": "MODULATE",
+      "executive_source": "deltax_local_runtime",
+      "observe_disposition": "PERMIT",
+      "executive_disposition": "PERMIT",
       "observe_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 1,
+        "tnm_event_id": "tnm_e079df277ad9483d",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executive_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 1,
+        "tnm_event_id": "tnm_e554ebeda3a2483e",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executed": {
         "CONTROL": [
@@ -68,12 +80,7 @@
           "feeding"
         ],
         "EXECUTIVE": [
-          "feeding",
-          "escape",
-          "walking",
-          "grooming",
-          "courtship",
-          "arousal"
+          "feeding"
         ]
       },
       "top_candidates": {
@@ -113,7 +120,7 @@
         ]
       },
       "divergence": {
-        "control_vs_executive_actions": true
+        "control_vs_executive_actions": false
       }
     },
     {
@@ -122,20 +129,32 @@
         "channel": "visual",
         "intensity": 1
       },
-      "executive_source": "deltax_stub",
-      "observe_disposition": "VETO",
-      "executive_disposition": "VETO",
+      "executive_source": "deltax_local_runtime",
+      "observe_disposition": "PERMIT",
+      "executive_disposition": "PERMIT",
       "observe_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 1,
+        "tnm_event_id": "tnm_fbf4f81daaf74d21",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executive_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 2,
+        "tnm_event_id": "tnm_26280fdf7a62473d",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executed": {
         "CONTROL": [
@@ -145,11 +164,7 @@
           "escape"
         ],
         "EXECUTIVE": [
-          "feeding",
-          "walking",
-          "grooming",
-          "courtship",
-          "arousal"
+          "feeding"
         ]
       },
       "top_candidates": {
@@ -174,7 +189,7 @@
           {
             "id": "local_executive_escape_1",
             "action": "escape",
-            "strength": 0.758
+            "strength": 0.698
           },
           {
             "id": "local_executive_feeding_0",
@@ -198,20 +213,32 @@
         "channel": "bitter",
         "intensity": 0.7
       },
-      "executive_source": "deltax_stub",
-      "observe_disposition": "MODULATE",
-      "executive_disposition": "MODULATE",
+      "executive_source": "deltax_local_runtime",
+      "observe_disposition": "PERMIT",
+      "executive_disposition": "PERMIT",
       "observe_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 1,
+        "tnm_event_id": "tnm_393aae169d364e56",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executive_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 3,
+        "tnm_event_id": "tnm_df2a9c12b7c84f8c",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executed": {
         "CONTROL": [
@@ -221,12 +248,7 @@
           "escape"
         ],
         "EXECUTIVE": [
-          "feeding",
-          "escape",
-          "walking",
-          "grooming",
-          "courtship",
-          "arousal"
+          "feeding"
         ]
       },
       "top_candidates": {
@@ -251,7 +273,7 @@
           {
             "id": "local_executive_escape_1",
             "action": "escape",
-            "strength": 1
+            "strength": 0.977
           },
           {
             "id": "local_executive_feeding_0",
@@ -275,20 +297,32 @@
         "channel": "pheromone",
         "intensity": 0.55
       },
-      "executive_source": "deltax_stub",
-      "observe_disposition": "MODULATE",
-      "executive_disposition": "MODULATE",
+      "executive_source": "deltax_local_runtime",
+      "observe_disposition": "PERMIT",
+      "executive_disposition": "PERMIT",
       "observe_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 1,
+        "tnm_event_id": "tnm_1a09cf1c4fc4467c",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executive_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 4,
+        "tnm_event_id": "tnm_07b45cb16af0488e",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executed": {
         "CONTROL": [
@@ -298,12 +332,7 @@
           "escape"
         ],
         "EXECUTIVE": [
-          "feeding",
-          "escape",
-          "walking",
-          "grooming",
-          "courtship",
-          "arousal"
+          "feeding"
         ]
       },
       "top_candidates": {
@@ -328,7 +357,7 @@
           {
             "id": "local_executive_escape_1",
             "action": "escape",
-            "strength": 0.94
+            "strength": 0.919
           },
           {
             "id": "local_executive_feeding_0",
@@ -352,20 +381,32 @@
         "channel": "wind",
         "intensity": 0.4
       },
-      "executive_source": "deltax_stub",
-      "observe_disposition": "MODULATE",
-      "executive_disposition": "MODULATE",
+      "executive_source": "deltax_local_runtime",
+      "observe_disposition": "PERMIT",
+      "executive_disposition": "PERMIT",
       "observe_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 1,
+        "tnm_event_id": "tnm_b1583acda15c4e27",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executive_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 5,
+        "tnm_event_id": "tnm_69ed6ceccc0c41a9",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executed": {
         "CONTROL": [
@@ -375,12 +416,7 @@
           "escape"
         ],
         "EXECUTIVE": [
-          "feeding",
-          "escape",
-          "walking",
-          "grooming",
-          "courtship",
-          "arousal"
+          "feeding"
         ]
       },
       "top_candidates": {
@@ -405,7 +441,7 @@
           {
             "id": "local_executive_escape_1",
             "action": "escape",
-            "strength": 0.885
+            "strength": 0.865
           },
           {
             "id": "local_executive_feeding_0",
@@ -429,20 +465,32 @@
         "channel": "visual",
         "intensity": 0.9
       },
-      "executive_source": "deltax_stub",
-      "observe_disposition": "VETO",
-      "executive_disposition": "VETO",
+      "executive_source": "deltax_local_runtime",
+      "observe_disposition": "PERMIT",
+      "executive_disposition": "PERMIT",
       "observe_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 1,
+        "tnm_event_id": "tnm_b2096680b8f34748",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executive_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 6,
+        "tnm_event_id": "tnm_a268dce00b9e4f1c",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executed": {
         "CONTROL": [
@@ -452,11 +500,7 @@
           "escape"
         ],
         "EXECUTIVE": [
-          "feeding",
-          "walking",
-          "grooming",
-          "courtship",
-          "arousal"
+          "feeding"
         ]
       },
       "top_candidates": {
@@ -505,20 +549,32 @@
         "channel": "sugar",
         "intensity": 0.6
       },
-      "executive_source": "deltax_stub",
-      "observe_disposition": "MODULATE",
-      "executive_disposition": "MODULATE",
+      "executive_source": "deltax_local_runtime",
+      "observe_disposition": "PERMIT",
+      "executive_disposition": "PERMIT",
       "observe_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 1,
+        "tnm_event_id": "tnm_5082868d955b4c07",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executive_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 7,
+        "tnm_event_id": "tnm_445b22fc1aa24b59",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executed": {
         "CONTROL": [
@@ -528,12 +584,7 @@
           "escape"
         ],
         "EXECUTIVE": [
-          "feeding",
-          "escape",
-          "walking",
-          "grooming",
-          "courtship",
-          "arousal"
+          "feeding"
         ]
       },
       "top_candidates": {
@@ -582,20 +633,32 @@
         "channel": "grooming",
         "intensity": 0.5
       },
-      "executive_source": "deltax_stub",
-      "observe_disposition": "MODULATE",
-      "executive_disposition": "MODULATE",
+      "executive_source": "deltax_local_runtime",
+      "observe_disposition": "PERMIT",
+      "executive_disposition": "PERMIT",
       "observe_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 1,
+        "tnm_event_id": "tnm_564a9bd6061f49e2",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executive_provenance": {
-        "executive_source": "deltax_stub",
-        "adapter": "DeltaXStub",
-        "genuine_deltax": false,
-        "note": "Reference stub only — not canonical DeltaX output"
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 8,
+        "tnm_event_id": "tnm_b280fafca3694f7f",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
       },
       "executed": {
         "CONTROL": [
@@ -605,12 +668,7 @@
           "escape"
         ],
         "EXECUTIVE": [
-          "feeding",
-          "escape",
-          "walking",
-          "grooming",
-          "courtship",
-          "arousal"
+          "feeding"
         ]
       },
       "top_candidates": {

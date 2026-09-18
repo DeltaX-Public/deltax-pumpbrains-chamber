@@ -17,6 +17,12 @@
     "demo:checkpoint": "node scripts/demo-checkpoint-replay.js",
     "demo:observatory": "node scripts/serve-observatory.js",
     "demo:hosted-observe": "node scripts/demo-hosted-observe.js",
-    "audit:pumpbrains": "node scripts/fetch-species-summary.js"
+    "audit:pumpbrains": "node scripts/fetch-species-summary.js",
+    "verify:sovereign": "node --test tests/sovereign_acceptance.test.js",
+    "battery:smoke": "node scripts/battery.js --seeds=5",
+    "battery:small": "node scripts/battery.js --seeds=25",
+    "battery:main": "node scripts/battery.js --seeds=100",
+    "stress:local": "node scripts/stress.js",
+    "compare:cross-substrate": "node scripts/cross_substrate_comparison.js"
   }
 }

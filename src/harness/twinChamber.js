@@ -119,6 +119,8 @@ export class TwinChamberHarness {
     return {
       timestamp: new Date().toISOString(),
       run_id: this.runId,
+      session_id: `${this.runId}_${chamber.toLowerCase()}`,
+      condition: chamber,
       step_id: stepId,
       objective: evalOpts.objective || 'matched_twin_coherence',
       environment_state_summary: { chamber, condition: chamber },
@@ -148,6 +150,20 @@ export class TwinChamberHarness {
     return snap;
   }
 
+  async runtimeCheckpoint() {
+    if (this.executive?.checkpoint) {
+      return this.executive.checkpoint(`${this.runId}_executive`);
+    }
+    return null;
+  }
+
+  async runtimeRestore(state) {
+    if (this.executive?.restore) {
+      return this.executive.restore(`${this.runId}_executive`, state);
+    }
+    return null;
+  }
+
   experimenterPerturb(kind, payload = {}) {
     const event = this.chamber.perturb(kind, payload);
     this.telemetry.record('experimenter_perturbation', event);
@@ -158,3 +174,4 @@ export class TwinChamberHarness {
     if (this.executive?.close) await this.executive.close();
   }
 }
+
