@@ -1,0 +1,447 @@
+{
+  "run_id": "twin_1789696775816",
+  "seed": 20260918,
+  "executive_mode": "local_runtime",
+  "steps": 5,
+  "dispositions": [
+    "PERMIT",
+    "PERMIT",
+    "PERMIT",
+    "PERMIT",
+    "PERMIT"
+  ],
+  "divergence_steps": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "note": "Local matched-twin chamber (computational substrate). Not a hosted PumpBrains LIF clone.",
+  "rows": [
+    {
+      "step": 1,
+      "stimulus": {
+        "channel": "sugar",
+        "intensity": 0.85,
+        "label": "resource"
+      },
+      "executive_source": "deltax_local_runtime",
+      "observe_disposition": "PERMIT",
+      "executive_disposition": "PERMIT",
+      "observe_provenance": {
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 1,
+        "tnm_event_id": "tnm_36bbe613e6544021",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
+      },
+      "executive_provenance": {
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 2,
+        "tnm_event_id": "tnm_ba72fbf479ba41e1",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
+      },
+      "executed": {
+        "CONTROL": [
+          "feeding"
+        ],
+        "OBSERVE": [
+          "feeding"
+        ],
+        "EXECUTIVE": [
+          "feeding"
+        ]
+      },
+      "top_candidates": {
+        "CONTROL": [
+          {
+            "id": "local_control_feeding_0",
+            "action": "feeding",
+            "strength": 0.49
+          },
+          {
+            "id": "local_control_walking_2",
+            "action": "walking",
+            "strength": 0.286
+          },
+          {
+            "id": "local_control_courtship_4",
+            "action": "courtship",
+            "strength": 0.22
+          }
+        ],
+        "EXECUTIVE": [
+          {
+            "id": "local_executive_feeding_0",
+            "action": "feeding",
+            "strength": 0.497
+          },
+          {
+            "id": "local_executive_grooming_3",
+            "action": "grooming",
+            "strength": 0.28
+          },
+          {
+            "id": "local_executive_escape_1",
+            "action": "escape",
+            "strength": 0.248
+          }
+        ]
+      },
+      "divergence": {
+        "control_vs_executive_actions": false
+      }
+    },
+    {
+      "step": 2,
+      "stimulus": {
+        "channel": "visual",
+        "intensity": 0.95,
+        "label": "hazard"
+      },
+      "executive_source": "deltax_local_runtime",
+      "observe_disposition": "PERMIT",
+      "executive_disposition": "PERMIT",
+      "observe_provenance": {
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 3,
+        "tnm_event_id": "tnm_4af6337448484630",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
+      },
+      "executive_provenance": {
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 4,
+        "tnm_event_id": "tnm_ce5be1b179c64208",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
+      },
+      "executed": {
+        "CONTROL": [
+          "escape"
+        ],
+        "OBSERVE": [
+          "escape"
+        ],
+        "EXECUTIVE": [
+          "feeding"
+        ]
+      },
+      "top_candidates": {
+        "CONTROL": [
+          {
+            "id": "local_control_escape_1",
+            "action": "escape",
+            "strength": 0.56
+          },
+          {
+            "id": "local_control_feeding_0",
+            "action": "feeding",
+            "strength": 0.471
+          },
+          {
+            "id": "local_control_walking_2",
+            "action": "walking",
+            "strength": 0.283
+          }
+        ],
+        "EXECUTIVE": [
+          {
+            "id": "local_executive_escape_1",
+            "action": "escape",
+            "strength": 0.675
+          },
+          {
+            "id": "local_executive_feeding_0",
+            "action": "feeding",
+            "strength": 0.477
+          },
+          {
+            "id": "local_executive_grooming_3",
+            "action": "grooming",
+            "strength": 0.277
+          }
+        ]
+      },
+      "divergence": {
+        "control_vs_executive_actions": true
+      }
+    },
+    {
+      "step": 3,
+      "stimulus": {
+        "channel": "bitter",
+        "intensity": 0.7,
+        "label": "aversion"
+      },
+      "executive_source": "deltax_local_runtime",
+      "observe_disposition": "PERMIT",
+      "executive_disposition": "PERMIT",
+      "observe_provenance": {
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 5,
+        "tnm_event_id": "tnm_f67e7854d2994f7f",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
+      },
+      "executive_provenance": {
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 6,
+        "tnm_event_id": "tnm_f7f4e85d113f463f",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
+      },
+      "executed": {
+        "CONTROL": [
+          "escape"
+        ],
+        "OBSERVE": [
+          "escape"
+        ],
+        "EXECUTIVE": [
+          "feeding"
+        ]
+      },
+      "top_candidates": {
+        "CONTROL": [
+          {
+            "id": "local_control_escape_1",
+            "action": "escape",
+            "strength": 0.85
+          },
+          {
+            "id": "local_control_feeding_0",
+            "action": "feeding",
+            "strength": 0.453
+          },
+          {
+            "id": "local_control_walking_2",
+            "action": "walking",
+            "strength": 0.28
+          }
+        ],
+        "EXECUTIVE": [
+          {
+            "id": "local_executive_escape_1",
+            "action": "escape",
+            "strength": 0.956
+          },
+          {
+            "id": "local_executive_feeding_0",
+            "action": "feeding",
+            "strength": 0.459
+          },
+          {
+            "id": "local_executive_grooming_3",
+            "action": "grooming",
+            "strength": 0.275
+          }
+        ]
+      },
+      "divergence": {
+        "control_vs_executive_actions": true
+      }
+    },
+    {
+      "step": 4,
+      "stimulus": {
+        "channel": "pheromone",
+        "intensity": 0.55,
+        "label": "social"
+      },
+      "executive_source": "deltax_local_runtime",
+      "observe_disposition": "PERMIT",
+      "executive_disposition": "PERMIT",
+      "observe_provenance": {
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 7,
+        "tnm_event_id": "tnm_86001195904b4aca",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
+      },
+      "executive_provenance": {
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 8,
+        "tnm_event_id": "tnm_f72df1cf591a4818",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
+      },
+      "executed": {
+        "CONTROL": [
+          "escape"
+        ],
+        "OBSERVE": [
+          "escape"
+        ],
+        "EXECUTIVE": [
+          "feeding"
+        ]
+      },
+      "top_candidates": {
+        "CONTROL": [
+          {
+            "id": "local_control_escape_1",
+            "action": "escape",
+            "strength": 0.802
+          },
+          {
+            "id": "local_control_feeding_0",
+            "action": "feeding",
+            "strength": 0.437
+          },
+          {
+            "id": "local_control_courtship_4",
+            "action": "courtship",
+            "strength": 0.392
+          }
+        ],
+        "EXECUTIVE": [
+          {
+            "id": "local_executive_escape_1",
+            "action": "escape",
+            "strength": 0.9
+          },
+          {
+            "id": "local_executive_feeding_0",
+            "action": "feeding",
+            "strength": 0.442
+          },
+          {
+            "id": "local_executive_courtship_4",
+            "action": "courtship",
+            "strength": 0.352
+          }
+        ]
+      },
+      "divergence": {
+        "control_vs_executive_actions": true
+      }
+    },
+    {
+      "step": 5,
+      "stimulus": {
+        "channel": "wind",
+        "intensity": 0.4,
+        "label": "novelty"
+      },
+      "executive_source": "deltax_local_runtime",
+      "observe_disposition": "PERMIT",
+      "executive_disposition": "PERMIT",
+      "observe_provenance": {
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 9,
+        "tnm_event_id": "tnm_8bf42eee93c9448b",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
+      },
+      "executive_provenance": {
+        "executive_source": "deltax_local_runtime",
+        "runtime_version": "0.1.0",
+        "branch_manifest_version": "0.1.0",
+        "branch_id": "pumpbrains_experimental",
+        "package_version": "0.1.0",
+        "tick_id": 10,
+        "tnm_event_id": "tnm_2b83242b1fbd4fb0",
+        "adapter": "DeltaXLocalRuntime",
+        "genuine_deltax": true,
+        "provider_disposition": "PERMIT"
+      },
+      "executed": {
+        "CONTROL": [
+          "escape"
+        ],
+        "OBSERVE": [
+          "escape"
+        ],
+        "EXECUTIVE": [
+          "feeding"
+        ]
+      },
+      "top_candidates": {
+        "CONTROL": [
+          {
+            "id": "local_control_escape_1",
+            "action": "escape",
+            "strength": 0.758
+          },
+          {
+            "id": "local_control_feeding_0",
+            "action": "feeding",
+            "strength": 0.422
+          },
+          {
+            "id": "local_control_courtship_4",
+            "action": "courtship",
+            "strength": 0.38
+          }
+        ],
+        "EXECUTIVE": [
+          {
+            "id": "local_executive_escape_1",
+            "action": "escape",
+            "strength": 0.848
+          },
+          {
+            "id": "local_executive_feeding_0",
+            "action": "feeding",
+            "strength": 0.427
+          },
+          {
+            "id": "local_executive_courtship_4",
+            "action": "courtship",
+            "strength": 0.344
+          }
+        ]
+      },
+      "divergence": {
+        "control_vs_executive_actions": true
+      }
+    }
+  ]
+}

@@ -1,27 +1,195 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"/><title>PumpBrains Twin-Chamber Observatory</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PumpBrains Twin-Chamber Observatory</title>
 <style>
-body{font-family:system-ui;background:#0b1020;color:#e8ecf7;margin:0;padding:1rem}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.card{background:#141a2e;border:1px solid #243049;border-radius:12px;padding:1rem}
-button{background:#1f6feb;color:#fff;border:0;border-radius:8px;padding:.5rem .8rem;cursor:pointer}
-pre{background:#0a0e1a;padding:1rem;border-radius:8px;overflow:auto;font-size:.75rem}
-</style></head><body>
-<h1>PumpBrains Twin-Chamber Observatory</h1>
-<p>In-browser stub only (<code>executive_source=deltax_stub</code>). Not genuine DeltaX. Not a PumpBrains LIF clone.</p>
-<p><button id="step">Step</button> <button id="reset">Reset</button></p>
+:root{--bg:#0b1020;--card:#141a2e;--line:#243049;--text:#e8ecf7;--muted:#9aa7c0;--accent:#1f6feb;--ok:#3fb950;--warn:#d29922;--div:#f85149}
+*{box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:1rem 1.25rem 2rem}
+h1{font-size:1.25rem;margin:0 0 .35rem}
+.sub{color:var(--muted);font-size:.9rem;margin:0 0 1rem;max-width:70rem}
+.controls{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:1rem}
+button,.file{background:var(--accent);color:#fff;border:0;border-radius:8px;padding:.5rem .85rem;cursor:pointer;font:inherit}
+button.secondary{background:#243049}
+button:disabled{opacity:.45;cursor:not-allowed}
+.badge{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#243049;font-size:.75rem;margin-left:.35rem}
+.badge.div{background:#3d1f24;color:#ffb4b0}
+.badge.ok{background:#16321f;color:#7ee787}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem;min-height:12rem}
+.card h2{margin:0 0 .75rem;font-size:1rem;display:flex;justify-content:space-between;gap:.5rem;align-items:center}
+.bar{height:.55rem;background:#0a0e1a;border-radius:4px;overflow:hidden;margin:.25rem 0 .55rem}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,#388bfd,#a371f7)}
+.row{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted)}
+.action{font-size:1.05rem;margin-top:.75rem}
+.action strong{color:#fff}
+.timeline{display:flex;gap:.4rem;flex-wrap:wrap;margin:1rem 0}
+.dot{width:2rem;height:2rem;border-radius:50%;border:2px solid var(--line);background:#0a0e1a;color:var(--muted);display:grid;place-items:center;cursor:pointer;font-size:.75rem}
+.dot.active{border-color:var(--accent);color:#fff;background:#172554}
+.dot.divergent{border-color:var(--div);color:#ffb4b0}
+pre{background:#0a0e1a;padding:1rem;border-radius:8px;overflow:auto;font-size:.72rem;max-height:22rem;border:1px solid var(--line)}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.75rem;margin:1rem 0}
+.meta .card{min-height:auto}
+.chain{font-family:ui-monospace,monospace;font-size:.78rem;line-height:1.55;color:var(--muted)}
+.chain b{color:var(--text)}
+input[type=file]{display:none}
+</style>
+</head>
+<body>
+<h1>PumpBrains Twin-Chamber Observatory <span class="badge" id="sourceBadge">playback</span></h1>
+<p class="sub" id="subtitle">Load a twin-run artifact to replay CONTROL / OBSERVE / EXECUTIVE side by side. Local matched-twin chamber playback — not a hosted PumpBrains LIF clone.</p>
+
+<div class="controls">
+  <button id="prev" class="secondary">Prev</button>
+  <button id="play">Play</button>
+  <button id="next">Next</button>
+  <button id="reset" class="secondary">Reset</button>
+  <label class="file">Load JSON<input id="file" type="file" accept="application/json,.json"/></label>
+  <button id="loadDefault" class="secondary">Load twin_1789696775816</button>
+  <span class="badge" id="stepBadge">step —</span>
+</div>
+
+<div class="timeline" id="timeline"></div>
+
+<div class="meta">
+  <div class="card">
+    <div class="row"><span>Run</span><strong id="runId">—</strong></div>
+    <div class="row"><span>Seed</span><strong id="seed">—</strong></div>
+    <div class="row"><span>Mode</span><strong id="mode">—</strong></div>
+    <div class="row"><span>Disposition</span><strong id="disp">—</strong></div>
+  </div>
+  <div class="card">
+    <div class="row"><span>Stimulus</span><strong id="stim">—</strong></div>
+    <div class="row"><span>Divergence</span><strong id="divflag">—</strong></div>
+    <div class="row"><span>Tick / TNM</span><strong id="tnm">—</strong></div>
+  </div>
+  <div class="card chain" id="chain">
+    brain proposal → public executive input → disposition → action → consequence
+  </div>
+</div>
+
 <div class="grid" id="grid"></div>
-<pre id="log">Ready.</pre>
+<h2 style="font-size:1rem;margin:1.25rem 0 .5rem">Intervention detail</h2>
+<pre id="log">Load an artifact to begin playback.</pre>
+
 <script type="module">
-const BEH=['feeding','escape','walking','grooming','courtship','arousal'];
-let state={step:0,chambers:Object.fromEntries(['CONTROL','OBSERVE','EXECUTIVE'].map(c=>[c,{behavior:Object.fromEntries(BEH.map(b=>[b,0.15])),executed:[]}])),modulation:{caution:0.5}};
-function render(){document.getElementById('grid').innerHTML=['CONTROL','OBSERVE','EXECUTIVE'].map(c=>`<div class="card"><h2>${c}</h2>${BEH.map(b=>`<div>${b}: ${state.chambers[c].behavior[b].toFixed(2)}</div>`).join('')}</div>`).join('');}
-document.getElementById('step').onclick=()=>{
-  state.step++;
-  for (const c of Object.values(state.chambers)){c.behavior.feeding=Math.min(1,c.behavior.feeding+0.1);c.executed.push({action_class:'feeding'});}
-  document.getElementById('log').textContent=JSON.stringify({step:state.step,executive_source:'deltax_stub',genuine_deltax:false},null,2);
+const BEH = ['feeding','escape','walking','grooming','courtship','arousal'];
+let artifact = null;
+let idx = 0;
+let timer = null;
+
+const $ = (id) => document.getElementById(id);
+
+function strengthMap(row, chamber) {
+  const map = Object.fromEntries(BEH.map((b) => [b, 0.05]));
+  const list = row?.top_candidates?.[chamber] || [];
+  for (const c of list) map[c.action] = c.strength;
+  // If only CONTROL/EXECUTIVE tops exist, approximate OBSERVE from CONTROL
+  if (chamber === 'OBSERVE' && !(row?.top_candidates?.OBSERVE)) {
+    for (const c of (row?.top_candidates?.CONTROL || [])) map[c.action] = c.strength;
+  }
+  return map;
+}
+
+function render() {
+  if (!artifact) return;
+  const row = artifact.rows[idx];
+  const div = row.divergence?.control_vs_executive_actions;
+  $('stepBadge').textContent = `step ${row.step} / ${artifact.rows.length}`;
+  $('runId').textContent = artifact.run_id;
+  $('seed').textContent = String(artifact.seed);
+  $('mode').textContent = artifact.executive_mode || row.executive_source;
+  $('disp').textContent = row.executive_disposition;
+  $('stim').textContent = `${row.stimulus.label || ''} ${row.stimulus.channel}@${row.stimulus.intensity}`;
+  $('divflag').textContent = div ? 'YES' : 'no';
+  $('divflag').parentElement.querySelector('strong').className = div ? 'badge div' : 'badge ok';
+  const prov = row.executive_provenance || {};
+  $('tnm').textContent = `tick ${prov.tick_id || '—'} · ${prov.tnm_event_id || '—'}`;
+  $('sourceBadge').textContent = row.executive_source || 'playback';
+
+  const brainTop = (row.top_candidates?.EXECUTIVE || row.top_candidates?.CONTROL || [])[0];
+  $('chain').innerHTML = [
+    `<b>brain proposal</b>: ${brainTop ? `${brainTop.action} (${brainTop.strength})` : '—'}`,
+    `<b>public executive input</b>: stimulus ${row.stimulus.channel} · constraints on step`,
+    `<b>disposition</b>: OBSERVE ${row.observe_disposition} / EXECUTIVE ${row.executive_disposition}`,
+    `<b>resulting action</b>: C ${row.executed.CONTROL.join(',')} · O ${row.executed.OBSERVE.join(',')} · E ${row.executed.EXECUTIVE.join(',')}`,
+    `<b>consequence</b>: divergence=${div ? 'CONTROL≠EXECUTIVE' : 'aligned'}`,
+  ].join('<br/>');
+
+  $('grid').innerHTML = ['CONTROL','OBSERVE','EXECUTIVE'].map((c) => {
+    const scores = strengthMap(row, c);
+    const executed = (row.executed?.[c] || []).join(', ') || '—';
+    const bars = BEH.map((b) => {
+      const v = scores[b] || 0;
+      return `<div class="row"><span>${b}</span><span>${v.toFixed(3)}</span></div><div class="bar"><i style="width:${Math.min(100, v*100)}%"></i></div>`;
+    }).join('');
+    return `<div class="card"><h2>${c}${c==='EXECUTIVE' && div ? ' <span class="badge div">diverged</span>' : ''}</h2>${bars}<div class="action">Executed: <strong>${executed}</strong></div></div>`;
+  }).join('');
+
+  $('timeline').innerHTML = artifact.rows.map((r, i) => {
+    const d = r.divergence?.control_vs_executive_actions;
+    return `<button class="dot ${i===idx?'active':''} ${d?'divergent':''}" data-i="${i}" title="step ${r.step}">${r.step}</button>`;
+  }).join('');
+  for (const el of document.querySelectorAll('.dot')) {
+    el.onclick = () => { idx = Number(el.dataset.i); render(); };
+  }
+
+  $('log').textContent = JSON.stringify({
+    step: row.step,
+    stimulus: row.stimulus,
+    executive_source: row.executive_source,
+    observe: { disposition: row.observe_disposition, provenance: row.observe_provenance },
+    executive: { disposition: row.executive_disposition, provenance: row.executive_provenance },
+    executed: row.executed,
+    top_candidates: row.top_candidates,
+    divergence: row.divergence,
+  }, null, 2);
+
+  $('prev').disabled = idx <= 0;
+  $('next').disabled = idx >= artifact.rows.length - 1;
+}
+
+function loadArtifact(data) {
+  if (!data?.rows?.length) throw new Error('Artifact missing rows[]');
+  artifact = data;
+  idx = 0;
+  $('subtitle').textContent = data.note || 'Twin-chamber artifact playback.';
   render();
+}
+
+async function loadDefault() {
+  const res = await fetch('./data/twin-run.json');
+  if (!res.ok) throw new Error(`Failed to load default artifact: ${res.status}`);
+  loadArtifact(await res.json());
+}
+
+$('prev').onclick = () => { if (idx > 0) { idx--; render(); } };
+$('next').onclick = () => { if (idx < artifact.rows.length - 1) { idx++; render(); } };
+$('reset').onclick = () => { idx = 0; stop(); render(); };
+$('play').onclick = () => {
+  if (!artifact) return;
+  if (timer) { stop(); return; }
+  $('play').textContent = 'Pause';
+  timer = setInterval(() => {
+    if (idx >= artifact.rows.length - 1) { stop(); return; }
+    idx++; render();
+  }, 1200);
 };
-document.getElementById('reset').onclick=()=>{state.step=0;render();document.getElementById('log').textContent='Reset.';};
-render();
-</script></body></html>
+function stop(){ if (timer) clearInterval(timer); timer=null; $('play').textContent='Play'; }
+
+$('file').onchange = async (e) => {
+  const f = e.target.files?.[0];
+  if (!f) return;
+  loadArtifact(JSON.parse(await f.text()));
+};
+$('loadDefault').onclick = () => loadDefault().catch((err) => { $('log').textContent = String(err); });
+
+loadDefault().catch(() => {
+  $('log').textContent = 'Default artifact not found. Use Load JSON.';
+});
+</script>
+</body>
+</html>
