@@ -27,7 +27,7 @@ This repository served as a reference integration for:
 - **Private DeltaX runtime remains local:** This public repository includes schemas, adapters, local simulator, observatory dashboard, and test harnesses. It does **not** ship proprietary DeltaX mathematics or private runtime source code.
 
 ### Transition to Connectome Entity
-Active research and engineering have shifted to [`deltax-connectome-entity`](https://github.com/DeltaX-Public/deltax-connectome-entity), which incorporates the whole-brain 139,255-neuron adult *Drosophila* connectome (FlyWire Codex) and identified descending neurons into a closed-loop navigation substrate. Hosted PumpBrains support remains preserved here and could be revisited in the future if official competition entry or external verification is desired.
+Active research and engineering have shifted to [`deltax-connectome-entity`](https://github.com/DeltaX-Public/deltax-connectome-entity), which incorporates a 165,122-neuron connectome graph recurrent substrate (*Drosophila* whole-CNS dataset) and identified descending neurons (e.g. steering DN circuit `DNa02/DNa01/DNp09`) into a closed-loop navigation substrate. Hosted PumpBrains support remains preserved here and could be revisited in the future if official competition entry or external verification is desired.
 
 ---
 
