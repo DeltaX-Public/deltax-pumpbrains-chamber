@@ -12,7 +12,7 @@ This report synthesizes the empirical results from the **multi-seed validation b
 1. `deltax-connectome-entity`: Spatial navigation and sensorimotor decision loop (`BrokenWorld` + `RoverBody` + Neurocontrol candidate proposal generator).
 2. `deltax-pumpbrains-chamber`: Multi-channel rate-coded tripartite chamber (`LocalTwinChamber` implementing `CONTROL`, `OBSERVE`, and `EXECUTIVE` conditions).
 
-Both substrates executed closed-loop evaluations against the private local Python runtime (`deltax-python-runtime`) via child process stdio JSONL transport.
+Both substrates executed closed-loop evaluations against the private local Python runtime via child process stdio JSONL transport.
 
 ### Sovereignty & Egress Verification
 - **Network Calls:** Exactly 0 bytes transmitted externally.
@@ -107,7 +107,7 @@ Automated test scans confirm zero leaks of private specification files, canonica
 
 ```bash
 # Set local provider
-export DELTAX_LOCAL_RUNTIME_CMD="/Users/dominicknoval/Projects/private/deltax-python-runtime/.venv/bin/python3 -m deltax_runtime.provider"
+export DELTAX_LOCAL_RUNTIME_CMD="/path/to/private/runtime/.venv/bin/python3 -m deltax_runtime.provider"
 
 # Run Connectome Battery & Tests
 cd /Users/dominicknoval/Projects/tmp/deltax-connectome-entity
