@@ -12,6 +12,81 @@ import {
   EXECUTIVE_SOURCES,
 } from '../schemas/packets.js';
 
+function mapProviderDecision(raw, packet) {
+  const disposition = assertDisposition(
+    raw.selected_disposition || raw.disposition || 'DEFER',
+  );
+  const idOf = (entry) => {
+    if (typeof entry === 'string') return entry;
+    return entry?.substrate_candidate_id || entry?.candidate_id || entry?.id || null;
+  };
+  const permitted = (raw.permitted_candidates || raw.permitted || [])
+    .map(idOf)
+    .filter(Boolean);
+  const vetoed = (raw.vetoed_candidates || raw.vetoed || [])
+    .map(idOf)
+    .filter(Boolean);
+  const deferred = (raw.deferred_candidates || raw.unresolved || []).map((entry) => {
+    if (typeof entry === 'string') return { candidate_id: entry, reason: 'unresolved' };
+    return {
+      candidate_id: idOf(entry),
+      reason: entry.reason || 'unresolved',
+    };
+  }).filter((d) => d.candidate_id);
+
+  let modulation_commands = raw.modulation_commands || [];
+  if ((!modulation_commands || !modulation_commands.length) && raw.modulation && Object.keys(raw.modulation).length) {
+    const hint = raw.modulation;
+    modulation_commands = [{
+      target: 'substrate',
+      parameter: 'caution',
+      previous_value: 0.5,
+      new_value: 0.7,
+      duration: 'step',
+      decision_id: null,
+      candidate_id: hint.selected_id || permitted[0] || null,
+      hint: hint.hint || null,
+    }];
+  }
+
+  const evaluated = (packet.candidate_actions || []).map((c) => {
+    let d = 'PERMIT';
+    let reason = 'local_runtime';
+    if (vetoed.includes(c.candidate_id) || vetoed.includes(c.substrate_candidate_id)) {
+      d = 'VETO';
+      reason = 'local_runtime_veto';
+    } else if (deferred.some((x) => x.candidate_id === c.candidate_id || x.candidate_id === c.substrate_candidate_id)) {
+      d = disposition === 'DEFER' || disposition === 'ESCALATE' ? disposition : 'DEFER';
+      reason = 'local_runtime_unresolved';
+    } else if (disposition === 'MODULATE' && (permitted.includes(c.candidate_id) || permitted.includes(c.substrate_candidate_id))) {
+      d = 'MODULATE';
+      reason = 'local_runtime_modulate';
+    } else if (!(permitted.includes(c.candidate_id) || permitted.includes(c.substrate_candidate_id))) {
+      d = disposition;
+      reason = 'local_runtime_not_selected';
+    }
+    return { candidate_id: c.candidate_id, disposition: d, reason };
+  });
+
+  return makeDecisionPacket({
+    selected_disposition: disposition,
+    evaluated_candidates: evaluated,
+    permitted_candidates: permitted,
+    vetoed_candidates: vetoed,
+    deferred_candidates: deferred,
+    modulation_commands,
+    unresolved_contradictions: packet.detected_contradictions || [],
+    constraint_refs: (packet.active_constraints || []).map((c) => (typeof c === 'string' ? { id: c } : c)),
+    provenance: {
+      ...(raw.provenance || {}),
+      executive_source: EXECUTIVE_SOURCES.local_runtime,
+      adapter: 'DeltaXLocalRuntime',
+      genuine_deltax: true,
+      provider_disposition: disposition,
+    },
+  });
+}
+
 export function createLocalRuntimeExecutive(config) {
   if (!config?.cmd || typeof config.cmd !== 'string' || !config.cmd.trim()) {
     const err = new Error(
@@ -22,7 +97,7 @@ export function createLocalRuntimeExecutive(config) {
   }
 
   const args = Array.isArray(config.args) ? config.args : [];
-  const timeoutMs = config.timeoutMs ?? 10_000;
+  const timeoutMs = config.timeoutMs ?? 15_000;
   let child = null;
   let rl = null;
   let pending = null;
@@ -40,6 +115,12 @@ export function createLocalRuntimeExecutive(config) {
       err.cause = e;
       throw err;
     }
+    child.stderr?.on('data', (buf) => {
+      // keep stderr available for debugging without breaking JSONL stdout
+      if (process.env.DELTAX_LOCAL_RUNTIME_DEBUG) {
+        process.stderr.write(`[local_runtime] ${buf}`);
+      }
+    });
     child.on('error', (e) => {
       if (pending) {
         pending.reject(Object.assign(
@@ -63,21 +144,13 @@ export function createLocalRuntimeExecutive(config) {
     rl = createInterface({ input: child.stdout });
     rl.on('line', (line) => {
       if (!pending) return;
-      const { resolve, reject, timer } = pending;
+      const { resolve, reject, timer, packet } = pending;
       pending = null;
       clearTimeout(timer);
       try {
         const raw = JSON.parse(line);
-        const decision = makeDecisionPacket({
-          ...raw,
-          provenance: {
-            ...(raw.provenance || {}),
-            executive_source: EXECUTIVE_SOURCES.local_runtime,
-            adapter: 'DeltaXLocalRuntime',
-            genuine_deltax: raw?.provenance?.genuine_deltax === true,
-          },
-        });
-        assertDisposition(decision.selected_disposition);
+        const decision = mapProviderDecision(raw, packet);
+        for (const cmd of decision.modulation_commands) cmd.decision_id = decision.decision_id;
         resolve(decision);
       } catch (e) {
         reject(Object.assign(new Error(`local_runtime returned invalid JSONL: ${e.message}`), {
@@ -110,7 +183,7 @@ export function createLocalRuntimeExecutive(config) {
             { code: 'LOCAL_RUNTIME_TIMEOUT' },
           ));
         }, timeoutMs);
-        pending = { resolve, reject, timer };
+        pending = { resolve, reject, timer, packet };
         try {
           child.stdin.write(JSON.stringify(packet) + '\n');
         } catch (e) {

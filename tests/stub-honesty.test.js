@@ -20,13 +20,20 @@ describe('stub-honesty', () => {
   });
 
   it('local_runtime missing cmd fails loudly without stub fallback', () => {
-    assert.throws(
-      () => createExecutive({ mode: 'local_runtime', localRuntime: { cmd: '' } }),
-      /Refusing silent stub fallback/,
-    );
-    assert.throws(
-      () => createExecutive({ mode: 'local_runtime' }),
-      /LOCAL_RUNTIME_UNAVAILABLE|Refusing silent stub fallback/,
-    );
+    const prev = process.env.DELTAX_LOCAL_RUNTIME_CMD;
+    delete process.env.DELTAX_LOCAL_RUNTIME_CMD;
+    try {
+      assert.throws(
+        () => createExecutive({ mode: 'local_runtime', localRuntime: { cmd: '' } }),
+        /Refusing silent stub fallback/,
+      );
+      assert.throws(
+        () => createExecutive({ mode: 'local_runtime' }),
+        /LOCAL_RUNTIME_UNAVAILABLE|Refusing silent stub fallback/,
+      );
+    } finally {
+      if (prev === undefined) delete process.env.DELTAX_LOCAL_RUNTIME_CMD;
+      else process.env.DELTAX_LOCAL_RUNTIME_CMD = prev;
+    }
   });
 });

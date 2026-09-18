@@ -7,3 +7,4 @@ coverage/
 telemetry-out/
 .tmp/
 dist/
+artifacts/*.json

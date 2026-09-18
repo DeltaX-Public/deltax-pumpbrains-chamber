@@ -67,8 +67,11 @@ export function stateToCandidates(state, meta = {}) {
       chamber: meta.chamber,
     }));
   }
-  return entries.map(([name, score], i) => ({
-    candidate_id: `${meta.slug || 'brain'}_${name}_${i}`,
+  return entries.map(([name, score], i) => {
+    const candidate_id = `${meta.slug || 'brain'}_${name}_${i}`;
+    return {
+    candidate_id,
+    substrate_candidate_id: candidate_id,
     action_class: name,
     source_population: `behavior:${name}`,
     activation_strength: typeof score === 'number' ? score : Number(score) || 0,
@@ -77,5 +80,6 @@ export function stateToCandidates(state, meta = {}) {
     conflicting_state: {},
     origin: 'brain_substrate',
     chamber: meta.chamber,
-  }));
+  };
+  });
 }

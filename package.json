@@ -4,12 +4,15 @@
   "description": "Public PumpBrains twin-chamber harness with DeltaX executive boundary (CONTROL / OBSERVE / EXECUTIVE).",
   "type": "module",
   "license": "MIT",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "test": "node --test tests/*.test.js",
     "demo:stub": "node scripts/demo-stub.js",
     "demo:twin": "node scripts/demo-twin.js",
     "demo:observatory": "node scripts/serve-observatory.js",
-    "audit:pumpbrains": "node scripts/fetch-species-summary.js"
+    "audit:pumpbrains": "node scripts/fetch-species-summary.js",
+    "demo:local-runtime": "node scripts/demo-local-runtime-twin.js"
   }
 }
