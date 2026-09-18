@@ -44,7 +44,7 @@ Validation batteries were conducted across matched random seeds (5, 25, and 100 
 | **Small** | 25 (20260900..24) | 200 | 100.0% | 200 | 0 | 10.1ms |
 | **Main** | 100 (20260900..99) | 800 | 100.0% | 800 | 0 | 10.0ms |
 
-*Key Finding*: Under nominal multi-channel stimuli, the executive permits actions while continuously modulating internal gain and caution parameters, maintaining steady-state equilibrium across 800 evaluated steps.
+*Key Finding*: Under nominal multi-channel stimuli, the executive permits actions and diverges from control via candidate arbitration rather than hard vetoes or modulations, maintaining steady-state equilibrium across 800 evaluated steps.
 
 ---
 
