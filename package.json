@@ -1,7 +1,7 @@
 {
   "name": "deltax-pumpbrains-chamber",
   "version": "0.1.0",
-  "description": "Public PumpBrains twin-chamber harness with DeltaX executive boundary (CONTROL / OBSERVE / EXECUTIVE).",
+  "description": "Offline-first PumpBrains-vocabulary twin-chamber harness with DeltaX executive boundary (CONTROL/OBSERVE/EXECUTIVE).",
   "type": "module",
   "license": "MIT",
   "engines": {
@@ -9,13 +9,14 @@
   },
   "scripts": {
     "test": "node --test tests/*.test.js",
+    "demo:offline": "node scripts/demo-offline.js",
     "demo:stub": "node scripts/demo-stub.js",
     "demo:twin": "node scripts/demo-twin.js",
-    "demo:observatory": "node scripts/serve-observatory.js",
-    "audit:pumpbrains": "node scripts/fetch-species-summary.js",
     "demo:local-runtime": "node scripts/demo-local-runtime-twin.js",
     "demo:stress": "node scripts/demo-stress-local-runtime.js",
     "demo:checkpoint": "node scripts/demo-checkpoint-replay.js",
-    "demo:hosted-observe": "node scripts/demo-hosted-observe.js"
+    "demo:observatory": "node scripts/serve-observatory.js",
+    "demo:hosted-observe": "node scripts/demo-hosted-observe.js",
+    "audit:pumpbrains": "node scripts/fetch-species-summary.js"
   }
 }

@@ -162,7 +162,8 @@ function loadArtifact(data) {
 }
 
 async function loadDefault() {
-  const res = await fetch('./data/twin-run.json');
+  let res = await fetch('./data/latest-offline-run.json');
+  if (!res.ok) res = await fetch('./data/twin-run.json');
   if (!res.ok) throw new Error(`Failed to load default artifact: ${res.status}`);
   loadArtifact(await res.json());
 }

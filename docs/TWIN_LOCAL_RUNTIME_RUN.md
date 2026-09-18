@@ -8,7 +8,7 @@ Executive: private local DeltaX provider via JSONL (`executive_source: deltax_lo
 
 ```bash
 export DELTAX_EXECUTIVE=local_runtime
-export DELTAX_LOCAL_RUNTIME_CMD="/path/to/deltax-python-runtime/.venv/bin/python -m deltax_runtime.provider"
+export DELTAX_LOCAL_RUNTIME_CMD="/path/to/private-deltax-runtime/.venv/bin/python -m deltax_runtime.provider"
 node scripts/demo-local-runtime-twin.js
 ```
 

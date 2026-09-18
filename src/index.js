@@ -14,3 +14,5 @@ export {
   assertDisposition,
   makeDecisionPacket,
 } from './schemas/packets.js';
+
+export { computeCoreMetrics } from './metrics/coreMetrics.js';

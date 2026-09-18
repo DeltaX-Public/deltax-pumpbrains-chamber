@@ -1,11 +1,13 @@
 # deltax-pumpbrains-chamber
 
-Public **PumpBrains twin-chamber** harness with a **DeltaX executive boundary**.
+Public **offline-first** twin-chamber harness with a **DeltaX executive boundary**.
 
 Chambers: **CONTROL** · **OBSERVE** · **EXECUTIVE**  
 Dispositions: **PERMIT** · **VETO** · **MODULATE** · **DEFER** · **ESCALATE**
 
-> **Claim boundary:** schemas, adapters, local matched-twin simulator, stub executive, observatory, and tests. Does **not** ship proprietary DeltaX mathematics, private Python runtime source, or PumpBrains LIF checkpoints (PumpBrains does not expose checkpoint/clone APIs).
+> **Default mode is local.** The experiment runs on a local matched-twin computational substrate that uses PumpBrains mosca channel/behavior vocabulary. It does **not** require PumpBrains.com or any other external API.
+
+> **Claim boundary:** schemas, adapters, local simulator, stub/`local_runtime` adapters, observatory, metrics, tests. Does **not** ship proprietary DeltaX mathematics or private Python runtime source.
 
 ## Causal chain
 
@@ -13,36 +15,55 @@ Dispositions: **PERMIT** · **VETO** · **MODULATE** · **DEFER** · **ESCALATE*
 WORLD → stimulus → brain candidates → DeltaX evaluation → modulation → action
 ```
 
-Brain candidates **must** exist before evaluation. Undocumented motor bypass is refused.
+Brain candidates must exist before evaluation. Undocumented motor bypass is refused.
 
-## Quick start
+## Quick start (offline)
 
 ```bash
 npm test
-npm run demo:stub
-npm run demo:twin
-npm run demo:observatory
+npm run demo:offline          # stub if no provider; local_runtime if DELTAX_LOCAL_RUNTIME_CMD set
+npm run demo:observatory      # http://127.0.0.1:8787/observatory/
+```
+
+With the private local DeltaX provider on this machine:
+
+```bash
+export DELTAX_EXECUTIVE=local_runtime
+export DELTAX_LOCAL_RUNTIME_CMD="/path/to/private-deltax-runtime/.venv/bin/python -m deltax_runtime.provider"
+npm run demo:offline
 ```
 
 ## Executive modes
 
 | Mode | `executive_source` | Notes |
 |------|--------------------|-------|
-| `stub` | `deltax_stub` | Reference adapter only — not genuine DeltaX |
-| `local_runtime` | `deltax_local_runtime` | JSONL child process; **fails loudly** if unavailable |
+| `stub` | `deltax_stub` | Offline reference adapter — not genuine DeltaX |
+| `local_runtime` | `deltax_local_runtime` | Local JSONL child process; fails loudly if unavailable |
 | `disabled` | `deltax_disabled` | Evaluate throws; no silent stub fallback |
+
+There is **no** required HTTP DeltaX Evaluate API for this project’s default path.
+
+## Other local demos
+
+```bash
+npm run demo:stub
+npm run demo:stress
+npm run demo:checkpoint
+npm run demo:local-runtime   # requires DELTAX_LOCAL_RUNTIME_CMD
+```
+
+## Optional network (not required)
+
+`npm run demo:hosted-observe` hits PumpBrains.com for OBSERVE-only telemetry. It is explicitly unmatched and is **not** the primary experiment path.
 
 ## Docs
 
-- `docs/DELTAX_INTERFACE.md` — versioned public executive contract
 - `docs/EXPERIMENT.md` — twin-chamber protocol
-- `docs/PUMPBRAINS_AUDIT.md` — SUPPORTED / PARTIALLY / NOT EXPOSED / LOCAL REQUIRED
-- `docs/LOCAL_RUNTIME_PROVIDER.md` — JSONL provider contract
-- `branches/pumpbrains_experimental.manifest.yaml` — claim manifest
-
-## PumpBrains (honest)
-
-API base `https://pumpbrains.com/api` — brains list/profile/state/stimulate/events; external readout/drive; WS. Species **mosca** channels/behaviors documented in the audit. **No hosted LIF checkpoint/clone.**
+- `docs/DELTAX_INTERFACE.md` — public executive contract
+- `docs/LOCAL_RUNTIME_PROVIDER.md` — JSONL provider boundary
+- `docs/PUMPBRAINS_AUDIT.md` — what hosted PumpBrains actually exposes
+- `docs/RESULTS_LOCAL_VERIFICATION.md` — claim-safe local results
+- `branches/pumpbrains_experimental.manifest.yaml`
 
 ## License
 

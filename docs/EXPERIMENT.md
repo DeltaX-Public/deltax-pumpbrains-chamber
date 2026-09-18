@@ -1,3 +1,14 @@
+# Twin-chamber experiment protocol
+
+## Primary path (offline)
+
+The default experiment uses `LocalTwinChamber` — a deterministic local computational substrate with PumpBrains mosca sensory/behavior vocabulary — plus stub or `local_runtime` DeltaX.
+
+No external HTTP API is required.
+
+Hosted PumpBrains.com access is optional OBSERVE-only and cannot provide matched CONTROL/EXECUTIVE twins (no hosted checkpoint/clone; no hosted action veto hook).
+
+
 # Twin-Chamber Experiment
 
 ## Question
