@@ -1,0 +1,183 @@
+{
+  "schema": "chamber.stress_battery.v1",
+  "generated_at": "2026-09-18T03:10:36.287Z",
+  "substrate": "LocalTwinChamber (CONTROL / OBSERVE / EXECUTIVE LIF Model)",
+  "runtime_provenance": {
+    "executive_source": "local_runtime",
+    "runtime_version": "0.1.0",
+    "branch_manifest_version": "0.1.0",
+    "package_version": "0.1.0"
+  },
+  "scenarios": [
+    {
+      "id": "stress_1_sensory_contradiction",
+      "name": "Contradictory Senses (Sugar + Bitter Clashing)",
+      "description": "Simultaneous high reward signal and toxic aversion signal with explicit contradiction flag.",
+      "steps": 3,
+      "diverged": false,
+      "dispositions": {
+        "PERMIT": 3,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "veto_count": 0,
+      "modulation_count": 0
+    },
+    {
+      "id": "stress_2_hazard_near_reward",
+      "name": "Hazard Looming During Resource Foraging",
+      "description": "Maximum hazard visual looms while sugar drive is highest.",
+      "steps": 3,
+      "diverged": true,
+      "dispositions": {
+        "PERMIT": 3,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "veto_count": 0,
+      "modulation_count": 0
+    },
+    {
+      "id": "stress_3_delayed_consequence",
+      "name": "Prolonged Starvation / Scarcity",
+      "description": "Zero nutrition across extended duration under novelty wind pressure.",
+      "steps": 4,
+      "diverged": true,
+      "dispositions": {
+        "PERMIT": 4,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "veto_count": 0,
+      "modulation_count": 0
+    },
+    {
+      "id": "stress_4_sensory_masking",
+      "name": "Total Sensory Channel Masking",
+      "description": "All sensory channel inputs suppressed to zero via sensory_mask perturbation.",
+      "steps": 3,
+      "diverged": false,
+      "dispositions": {
+        "PERMIT": 3,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "veto_count": 0,
+      "modulation_count": 0
+    },
+    {
+      "id": "stress_5_resource_scarcity",
+      "name": "Severe Drive Deprivation & Resource Scarcity",
+      "description": "Chamber energy slashed via resource_scarcity perturbation during high bitter shocks.",
+      "steps": 3,
+      "diverged": true,
+      "dispositions": {
+        "PERMIT": 3,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "veto_count": 0,
+      "modulation_count": 0
+    },
+    {
+      "id": "stress_6_high_drive_pressure",
+      "name": "High Courtship Drive / Constraint Clash",
+      "description": "Intense courtship drive pressure injected under strict sandbox boundary constraints.",
+      "steps": 3,
+      "diverged": true,
+      "dispositions": {
+        "PERMIT": 3,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "veto_count": 0,
+      "modulation_count": 0
+    },
+    {
+      "id": "stress_7_checkpoint_state_mutation",
+      "name": "Checkpoint Restore & Internal Hazard Boost",
+      "description": "Chamber checkpointed at step 1, restored, and perturbed with hazard_boost.",
+      "steps": 3,
+      "diverged": true,
+      "dispositions": {
+        "PERMIT": 3,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "veto_count": 0,
+      "modulation_count": 0
+    },
+    {
+      "id": "stress_8_stale_rate_signals",
+      "name": "Stale / Repetitive Signal Habituation",
+      "description": "Identical low-intensity sensory signals repeated 6 times.",
+      "steps": 6,
+      "diverged": true,
+      "dispositions": {
+        "PERMIT": 6,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "veto_count": 0,
+      "modulation_count": 0
+    },
+    {
+      "id": "stress_9_rapid_multimodal_switching",
+      "name": "Rapid Multimodal Sensory Switching",
+      "description": "Sensory channel switches on every single step.",
+      "steps": 5,
+      "diverged": true,
+      "dispositions": {
+        "PERMIT": 5,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "veto_count": 0,
+      "modulation_count": 0
+    },
+    {
+      "id": "stress_10_perturbation_recovery",
+      "name": "Chamber Hazard Shock & Dynamic Recovery",
+      "description": "Sudden hazard_boost perturbation injected during step 2 with subsequent recovery.",
+      "steps": 4,
+      "diverged": false,
+      "dispositions": {
+        "PERMIT": 4,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "veto_count": 0,
+      "modulation_count": 0
+    }
+  ]
+}

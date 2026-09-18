@@ -1,5 +1,5 @@
 {
-  "run_id": "stress_1789697212856",
+  "run_id": "stress_1789701079529",
   "kind": "divergence_stress",
   "seed": 20260918,
   "executive_mode": "local_runtime",
@@ -44,7 +44,7 @@
           {
             "candidate_id": "local_executive_feeding_0",
             "action_class": "feeding",
-            "decision_id": "dec_1789697212891_dsbaqo",
+            "decision_id": "dec_1789701079566_uex9s4",
             "at": 0
           }
         ]
@@ -56,8 +56,8 @@
         "branch_manifest_version": "0.1.0",
         "branch_id": "pumpbrains_experimental",
         "package_version": "0.1.0",
-        "tick_id": 2,
-        "tnm_event_id": "tnm_9dcb08b7dbc94af3",
+        "tick_id": 1,
+        "tnm_event_id": "tnm_56283be4b03b4b30",
         "adapter": "DeltaXLocalRuntime",
         "genuine_deltax": true,
         "provider_disposition": "PERMIT"
@@ -106,7 +106,7 @@
           {
             "candidate_id": "local_executive_feeding_0",
             "action_class": "feeding",
-            "decision_id": "dec_1789697212893_ltvp78",
+            "decision_id": "dec_1789701079568_0hpi7o",
             "at": 1
           }
         ]
@@ -118,8 +118,8 @@
         "branch_manifest_version": "0.1.0",
         "branch_id": "pumpbrains_experimental",
         "package_version": "0.1.0",
-        "tick_id": 4,
-        "tnm_event_id": "tnm_0772ebbde6224596",
+        "tick_id": 2,
+        "tnm_event_id": "tnm_a7f38f69067940a7",
         "adapter": "DeltaXLocalRuntime",
         "genuine_deltax": true,
         "provider_disposition": "PERMIT"
@@ -164,7 +164,7 @@
           {
             "candidate_id": "local_executive_feeding_0",
             "action_class": "feeding",
-            "decision_id": "dec_1789697212895_qrwila",
+            "decision_id": "dec_1789701079570_xyuwra",
             "at": 2
           }
         ]
@@ -176,8 +176,8 @@
         "branch_manifest_version": "0.1.0",
         "branch_id": "pumpbrains_experimental",
         "package_version": "0.1.0",
-        "tick_id": 6,
-        "tnm_event_id": "tnm_9754baa2d5104fdc",
+        "tick_id": 3,
+        "tnm_event_id": "tnm_0cc7288d2df54832",
         "adapter": "DeltaXLocalRuntime",
         "genuine_deltax": true,
         "provider_disposition": "PERMIT"
@@ -225,7 +225,7 @@
           {
             "candidate_id": "local_executive_feeding_0",
             "action_class": "feeding",
-            "decision_id": "dec_1789697212896_bd2gn7",
+            "decision_id": "dec_1789701079572_omk78b",
             "at": 3
           }
         ]
@@ -237,8 +237,8 @@
         "branch_manifest_version": "0.1.0",
         "branch_id": "pumpbrains_experimental",
         "package_version": "0.1.0",
-        "tick_id": 8,
-        "tnm_event_id": "tnm_a65bd6cae8d64ac1",
+        "tick_id": 4,
+        "tnm_event_id": "tnm_8b2504d6832942aa",
         "adapter": "DeltaXLocalRuntime",
         "genuine_deltax": true,
         "provider_disposition": "PERMIT"

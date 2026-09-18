@@ -1,0 +1,2350 @@
+{
+  "schema": "chamber.validation_battery.v1",
+  "generated_at": "2026-09-18T03:10:55.452Z",
+  "substrate": "LocalTwinChamber (CONTROL / OBSERVE / EXECUTIVE LIF Model)",
+  "runtime_provenance": {
+    "executive_source": "local_runtime",
+    "runtime_version": "0.1.0",
+    "branch_manifest_version": "0.1.0",
+    "package_version": "0.1.0"
+  },
+  "aggregate": {
+    "total_seeds": 100,
+    "seed_range": "20260900..20260999",
+    "divergence_rate": 1,
+    "total_steps_evaluated": 800,
+    "executive_governance": {
+      "mean_intervention_rate": 0,
+      "total_permits": 800,
+      "total_vetoes": 0,
+      "total_modulations": 0,
+      "total_defers": 0
+    },
+    "performance": {
+      "mean_latency_ms": 10
+    }
+  },
+  "runs": [
+    {
+      "seed": 20260900,
+      "diverged": true,
+      "divergence_steps": [
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 12
+    },
+    {
+      "seed": 20260901,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 11
+    },
+    {
+      "seed": 20260902,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 12
+    },
+    {
+      "seed": 20260903,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260904,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260905,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260906,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260907,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260908,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260909,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260910,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260911,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 12
+    },
+    {
+      "seed": 20260912,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260913,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260914,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260915,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260916,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260917,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260918,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 11
+    },
+    {
+      "seed": 20260919,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260920,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 11
+    },
+    {
+      "seed": 20260921,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 12
+    },
+    {
+      "seed": 20260922,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260923,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260924,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 11
+    },
+    {
+      "seed": 20260925,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 11
+    },
+    {
+      "seed": 20260926,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260927,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260928,
+      "diverged": true,
+      "divergence_steps": [
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260929,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 11
+    },
+    {
+      "seed": 20260930,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260931,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 13
+    },
+    {
+      "seed": 20260932,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 11
+    },
+    {
+      "seed": 20260933,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 11
+    },
+    {
+      "seed": 20260934,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260935,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260936,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260937,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 11
+    },
+    {
+      "seed": 20260938,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260939,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 11
+    },
+    {
+      "seed": 20260940,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260941,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260942,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260943,
+      "diverged": true,
+      "divergence_steps": [
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260944,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260945,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260946,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260947,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 12
+    },
+    {
+      "seed": 20260948,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260949,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260950,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260951,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260952,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260953,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260954,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260955,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260956,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 11
+    },
+    {
+      "seed": 20260957,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260958,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260959,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260960,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260961,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260962,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260963,
+      "diverged": true,
+      "divergence_steps": [
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260964,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260965,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260966,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 12
+    },
+    {
+      "seed": 20260967,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260968,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260969,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260970,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260971,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260972,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260973,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260974,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260975,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260976,
+      "diverged": true,
+      "divergence_steps": [
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 12
+    },
+    {
+      "seed": 20260977,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260978,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260979,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260980,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260981,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260982,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260983,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260984,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260985,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260986,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 12
+    },
+    {
+      "seed": 20260987,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260988,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260989,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260990,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260991,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260992,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260993,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260994,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260995,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260996,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 11
+    },
+    {
+      "seed": 20260997,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 10
+    },
+    {
+      "seed": 20260998,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 9
+    },
+    {
+      "seed": 20260999,
+      "diverged": true,
+      "divergence_steps": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "dispositions": {
+        "PERMIT": 8,
+        "VETO": 0,
+        "MODULATE": 0,
+        "DEFER": 0,
+        "ESCALATE": 0
+      },
+      "intervention_rate": 0,
+      "hazard_encounters": 4,
+      "repeated_action_loops": 7,
+      "latency_ms": 11
+    }
+  ]
+}

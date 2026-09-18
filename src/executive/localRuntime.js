@@ -144,11 +144,15 @@ export function createLocalRuntimeExecutive(config) {
     rl = createInterface({ input: child.stdout });
     rl.on('line', (line) => {
       if (!pending) return;
-      const { resolve, reject, timer, packet } = pending;
+      const { resolve, reject, timer, packet, isRaw } = pending;
       pending = null;
       clearTimeout(timer);
       try {
         const raw = JSON.parse(line);
+        if (isRaw || raw.type) {
+          resolve(raw);
+          return;
+        }
         const decision = mapProviderDecision(raw, packet);
         for (const cmd of decision.modulation_commands) cmd.decision_id = decision.decision_id;
         resolve(decision);
@@ -160,41 +164,60 @@ export function createLocalRuntimeExecutive(config) {
     });
   }
 
+  function sendLine(data, packet, isRaw = false) {
+    if (closed) throw Object.assign(new Error('local_runtime executive is closed'), { code: 'LOCAL_RUNTIME_CLOSED' });
+    ensureChild();
+    if (!child?.stdin) {
+      throw Object.assign(
+        new Error('local_runtime unavailable: no stdin. Refusing silent stub fallback.'),
+        { code: 'LOCAL_RUNTIME_UNAVAILABLE' },
+      );
+    }
+    if (pending) throw new Error('local_runtime: overlapping evaluate calls not supported');
+    return new Promise((resolve, reject) => {
+      const timer = setTimeout(() => {
+        pending = null;
+        reject(Object.assign(
+          new Error(`local_runtime timed out after ${timeoutMs}ms. Refusing silent stub fallback.`),
+          { code: 'LOCAL_RUNTIME_TIMEOUT' },
+        ));
+      }, timeoutMs);
+      pending = { resolve, reject, timer, packet, isRaw };
+      try {
+        child.stdin.write(JSON.stringify(data) + '\n');
+      } catch (e) {
+        clearTimeout(timer);
+        pending = null;
+        reject(Object.assign(
+          new Error(`local_runtime write failed: ${e.message}. Refusing silent stub fallback.`),
+          { code: 'LOCAL_RUNTIME_UNAVAILABLE', cause: e },
+        ));
+      }
+    });
+  }
+
   return {
     mode: 'local_runtime',
     executive_source: EXECUTIVE_SOURCES.local_runtime,
     genuine_deltax: true,
     async evaluate(packet) {
-      if (closed) throw Object.assign(new Error('local_runtime executive is closed'), { code: 'LOCAL_RUNTIME_CLOSED' });
       assertCandidatesFirst(packet);
-      ensureChild();
-      if (!child?.stdin) {
-        throw Object.assign(
-          new Error('local_runtime unavailable: no stdin. Refusing silent stub fallback.'),
-          { code: 'LOCAL_RUNTIME_UNAVAILABLE' },
-        );
-      }
-      if (pending) throw new Error('local_runtime: overlapping evaluate calls not supported');
-      return new Promise((resolve, reject) => {
-        const timer = setTimeout(() => {
-          pending = null;
-          reject(Object.assign(
-            new Error(`local_runtime timed out after ${timeoutMs}ms. Refusing silent stub fallback.`),
-            { code: 'LOCAL_RUNTIME_TIMEOUT' },
-          ));
-        }, timeoutMs);
-        pending = { resolve, reject, timer, packet };
-        try {
-          child.stdin.write(JSON.stringify(packet) + '\n');
-        } catch (e) {
-          clearTimeout(timer);
-          pending = null;
-          reject(Object.assign(
-            new Error(`local_runtime write failed: ${e.message}. Refusing silent stub fallback.`),
-            { code: 'LOCAL_RUNTIME_UNAVAILABLE', cause: e },
-          ));
-        }
-      });
+      return sendLine(packet, packet, false);
+    },
+    async sendRaw(message) {
+      return sendLine(message, message, true);
+    },
+    async ping() {
+      return this.sendRaw({ type: 'ping' });
+    },
+    async checkpoint(sessionId = 'default') {
+      return this.sendRaw({ type: 'checkpoint', session_id: sessionId });
+    },
+    async restore(sessionId = 'default', state = {}) {
+      return this.sendRaw({ type: 'restore', session_id: sessionId, state });
+    },
+    async reset(sessionId = 'default') {
+      return this.sendRaw({ type: 'reset', session_id: sessionId });
     },
     async close() {
       closed = true;
@@ -204,3 +227,4 @@ export function createLocalRuntimeExecutive(config) {
     },
   };
 }
+
