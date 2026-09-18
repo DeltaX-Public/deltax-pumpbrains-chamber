@@ -1,0 +1,30 @@
+schema_version: 1
+branch_id: pumpbrains_experimental
+title: PumpBrains Twin-Chamber (CONTROL / OBSERVE / EXECUTIVE)
+status: public_bootstrap
+claim_boundary:
+  includes:
+    - public DeltaX executive interface schemas
+    - PumpBrains REST/WS adapter (honest capability audit)
+    - local matched-twin chamber simulator (schema-aligned, not LIF clone)
+    - stub / local_runtime / disabled executive modes
+    - observatory UI and integration tests
+  excludes:
+    - proprietary DeltaX mathematics
+    - private python runtime source
+    - PumpBrains hosted LIF checkpoints (not exposed by vendor)
+species_focus: mosca
+chambers: [CONTROL, OBSERVE, EXECUTIVE]
+dispositions: [PERMIT, VETO, MODULATE, DEFER, ESCALATE]
+executive_modes: [stub, local_runtime, disabled]
+provenance_labels:
+  stub: deltax_stub
+  local_runtime: deltax_local_runtime
+  disabled: deltax_disabled
+pumpbrains:
+  api_base: https://pumpbrains.com/api
+  audit_doc: docs/PUMPBRAINS_AUDIT.md
+entrypoints:
+  harness: src/harness/twinChamber.js
+  observatory: observatory/index.html
+  tests: tests/
