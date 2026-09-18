@@ -112,7 +112,7 @@ export function createLocalRuntimeExecutive(config) {
         }, timeoutMs);
         pending = { resolve, reject, timer };
         try {
-          child.stdin.write(JSON.stringify({ type: 'evaluate', packet }) + '\n');
+          child.stdin.write(JSON.stringify(packet) + '\n');
         } catch (e) {
           clearTimeout(timer);
           pending = null;
