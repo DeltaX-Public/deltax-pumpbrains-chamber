@@ -106,6 +106,6 @@ Relying on external cloud APIs or third-party hosted services introduces network
 
 ## 7. Relationship to `deltax-connectome-entity` & Future Resumption
 
-Active engineering effort has consolidated on `deltax-connectome-entity`, which integrates the complete 139,255-neuron adult *Drosophila* central nervous system (FlyWire Codex dataset) with anatomically identified descending neurons (DNp01, DNb01, etc.) directly into a closed-loop spatial navigation loop (`BrokenWorld`).
+Active engineering effort has consolidated on `deltax-connectome-entity`, which integrates the 165,122-neuron connectome graph recurrent substrate (*Drosophila* whole-CNS dataset) with anatomically identified descending neurons (such as the steering DN circuit `DNa02/DNa01/DNp09`) directly into a closed-loop spatial navigation loop (`BrokenWorld`).
 
 Should hosted PumpBrains introduce bidirectional execution sandboxes or official competition entry requirements, this repository can be resumed by following the instructions in `STATUS.md`.

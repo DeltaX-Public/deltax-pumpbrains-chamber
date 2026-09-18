@@ -14,7 +14,7 @@
   - Offline stub mode (no provider): **20 passed, 4 skipped (live provider tests), 0 failed** across 10 suites.
   - Sovereign Acceptance Suite (`tests/sovereign_acceptance.test.js`): **6 passed, 0 failed**.
   - Private Boundary Verification (`tests/private-boundary.test.js`): **2 passed, 0 failed** (zero private source or doc leaks).
-- **Latest Main Commit:** `e7fc6a6` ("Phase II: Sovereign Validation Battery, Stress Suite & Cross-Substrate Evidence (#1)").
+- **Latest Frozen Main Commit:** `2ce0c5a` ("docs: archive PumpBrains chamber as shelved reference integration (#2)").
 - **Open PRs:** 0.
 
 ---
@@ -42,7 +42,7 @@
 
 ## 4. Why Active Development Is Paused
 
-- **Primary Research Focus:** Whole-brain causal connectome integration in `deltax-connectome-entity` provides a 139,255-neuron connectome substrate with identified descending neurons, offering deeper scientific grounding than the phenomenological rate-coded model in `LocalTwinChamber`.
+- **Primary Research Focus:** Whole-brain causal connectome integration in `deltax-connectome-entity` provides a 165,122-neuron connectome graph recurrent substrate (*Drosophila* whole-CNS dataset) with identified descending neurons (e.g. steering DN circuit `DNa02/DNa01/DNp09`), offering deeper scientific grounding than the phenomenological rate-coded model in `LocalTwinChamber`.
 - **Reference Objective Fulfilled:** `deltax-pumpbrains-chamber` has completed its mission as a clean, reproducible reference implementation of the tripartite chamber architecture and JSONL provider IPC boundary.
 
 ---
